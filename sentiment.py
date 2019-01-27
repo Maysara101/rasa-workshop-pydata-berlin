@@ -24,16 +24,6 @@ class LextoTokenizer(Component):
     def __init__(self, component_config=None):
         super().__init__(component_config)
 
-    def train(self, training_data, cfg, **kwargs):
-        """
-        No need any further training on this tokenizer
-        :param training_data:
-        :param cfg:
-        :param kwargs:
-        :return:
-        """
-        pass
-
     def process(self, message, **kwargs) -> None:
         message.set("tokens", self.tokenize(message.text))
 
