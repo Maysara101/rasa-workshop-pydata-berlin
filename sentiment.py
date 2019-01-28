@@ -27,6 +27,10 @@ class LextoTokenizer(Component):
     def process(self, message, **kwargs) -> None:
         message.set("tokens", self.tokenize(message.text))
 
+    def train(self, training_data, config, **kwargs):
+        for example in training_data.training_examples:
+            example.set("tokens", self.tokenize(example.text))
+
     def tokenize(self, text: Text):
         tmp = word_tokenize(text, engine='pylexto')
         words = [elem for elem in tmp if elem.strip()]
