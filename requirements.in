@@ -1,0 +1,6 @@
+jupyter
+rasa_core
+rasa_nlu[spacy]
+sklearn_crfsuite
+pygraphviz
+#pip install https://github.com/PyThaiNLP/pythainlp/archive/dev.zip

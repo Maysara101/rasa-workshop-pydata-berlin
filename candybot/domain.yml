@@ -1,0 +1,53 @@
+intents:
+  - first_query:
+      use_entities: false
+  - chitchat:
+      use_entities: false
+  - bargain
+  - inform
+  - affirm
+  - deny
+  - stop
+  - thankyou
+  - greet
+
+entities:
+  - COLOR
+  - QTY
+
+slots:
+  QTY:
+    type: unfeaturized
+    auto_fill: false
+  COLOR:
+    type: unfeaturized
+    auto_fill: false
+
+templates:
+  utter_ask_color:
+    - text: "รับลูกอมสีอะไรดีครับ"
+  utter_ask_qty:
+    - text: "รับกี่เม็ดดีครับ"
+  utter_ask_feedback:
+    - text: "ขอคำติชมซักนิด เพื่อปรับปรุงการบริการครับ"
+  utter_submit:
+    - text: "เรียบร้อย"
+  utter_slots_values:
+    - text: "สั่งของดังนี้น่ะครับ {COLOR} {QTY}"
+  utter_noworries:
+    - text: "ยินดีต้อนรับ"
+  utter_chitchat:
+    - text: "คุยเล่น"
+  utter_ask_continue:
+    - text: "ทำรายการต่อเถอะครับ"
+  utter_wrong_color:
+    - text: "ลูกอมสีนี้ ไม่มีในระบบครับ ขออภัย"
+  utter_wrong_qty:
+    - text: "ปริมาณต้องเป็นจำนวนเต็มบกวน่ะครับ"
+  utter_default:
+    - text: "ขออภัย ผมไม่เข้าใจครับ"
+  utter_greet:
+    - text: "สวัสดีครับ ผมคือ candybot โปรแกรมขายลูกอมสามสี"
+
+actions:
+  - action_list_colors
