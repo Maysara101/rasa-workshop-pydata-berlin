@@ -39,6 +39,16 @@ folder of your working directory.
 ```make run```  
 This will load the assistant in your command line for you to chat.
 
+## REST API
+`POST`: `http://localhost:5005/webhooks/rest/webhook`
+
+```bash
+{
+    "sender": "JohnConnor",
+    "message": "Hi"
+}
+```
+
 
 ## Encountered any issues?
 Let us know about it by posting on [Rasa Community Forum](https://forum.rasa.com)!

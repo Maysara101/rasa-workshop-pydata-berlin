@@ -1,15 +1,12 @@
 
 ## intent:greet
 - hey
-- hello there
-- สวีดัด
-- หวัดดี
+- hello [Peter](PERSON)
+- hi [Andrew](PERSON)
+- รถ [Benz](CAR) สวย
+- รถ [Acura](CAR) งามแท้
 
-## intent:goodbye
-- cu
-- good by
-- cee you later
-- ลาก่อย
-- บาย
-- บ๊าย บาย
-- บัย
+## intent:query
+- สี[เขียว](COLOR)เท่าไหร่
+- สี[เขียว](COLOR)ราคาเท่าไหร่
+
