@@ -14,6 +14,7 @@ intents:
 entities:
   - COLOR
   - QTY
+  - COLOR_LIST
 
 slots:
   QTY:
@@ -38,13 +39,11 @@ templates:
   utter_confirm:
     - text: "สั่งของดังนี้น่ะครับ {COLOR} {QTY}"
   utter_noworries:
-    - text: "ยินดีต้อนรับ"
+    - text: "ไม่มีปัญหาครับ มาได้ทุกเวลา"
   utter_chitchat:
     - text: "คุยเล่น"
   utter_ask_continue:
     - text: "ทำรายการต่อเถอะครับ"
-  utter_list_colors:
-    - text: "มีให้เพียงเท่านี้ มีเพียงแค่เท่านี้ .... {COLOR_LIST}"
   utter_wrong_color:
     - text: "ลูกอมสีนี้ ไม่มีในระบบครับ ขออภัย"
   utter_wrong_qty:
@@ -53,29 +52,17 @@ templates:
     - text: "ขออภัย ผมไม่เข้าใจครับ"
   utter_greet:
     - text: "สวัสดีครับ ผมคือ candybot โปรแกรมขายลูกอมสามสี"
+  utter_show_colors:
+    - text: "มีสีแดง, สีเขียว, และสีน้ำเงินครับ รับสีไหนดีครับ?"
   utter_thk_you:
     - text: "ขอบคุณที่สละเวลาครับ"
   utter_slots_values:
     - text: "I got your order {color}"
 
 actions:
-  - action_list_colors
-  - action_list_pricing
-  - utter_ask_color
-  - utter_ask_qty
-  - utter_ask_feedback
-  - utter_submit
-  - utter_confirm
-  - utter_noworries
-  - utter_chitchat
-  - utter_ask_continue
-  - utter_list_colors
-  - utter_wrong_color
-  - utter_wrong_qty
-  - utter_default
-  - utter_greet
-  - utter_thk_you
-  - utter_slot_values
+- utter_greet
+- utter_noworries
+- utter_show_colors
 
 forms:
   - candy_form
