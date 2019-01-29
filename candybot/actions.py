@@ -14,9 +14,8 @@ class ActionListColor(Action):
             tracker,  # type: Tracker
             domain  # type:  Dict[Text, Any]
             ) -> List[Dict[str, any]]:
-        result = ['red', 'green', 'blue']
-        dispatcher.utter_template('utter_list_colors', tracker)
-        return [SlotSet("COLOR_LIST", result if result is not None else [])]
+        result = ['white', 'red', 'black']
+        return [SlotSet("COLOR_LIST", result)]
 
 
 class ActionListPricing(Action):

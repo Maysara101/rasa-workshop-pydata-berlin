@@ -18,9 +18,14 @@
 
 ## Generated Story 2476928141338771446
 * greet
-    - utter_greet
+  - utter_greet
 * color_query
-    - utter_show_colors
+  - utter_show_colors
 * deny
-    - utter_noworries
+  - utter_noworries
 
+## Customer list colors from database not hardcode
+* db_list
+  - action_list_colors
+  - slot{"COLOR_LIST": "three colors"}
+  - utter_list_colors

@@ -239,3 +239,6 @@
 - uh okay thank you good bye
 - thank you bye
 - um okay thank you good bye
+
+## intent:db_list
+- list database

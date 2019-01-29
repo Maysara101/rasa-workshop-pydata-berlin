@@ -60,12 +60,16 @@ templates:
     - text: "ขอบคุณที่สละเวลาครับ"
   utter_slots_values:
     - text: "I got your order {color}"
+  utter_list_colors:
+    - text: "db answers {COLOR_LIST}"
 
 actions:
 - utter_greet
 - utter_noworries
 - utter_show_colors
 - utter_show_prices
+- utter_list_colors
+- action_list_colors
 
 forms:
   - candy_form
