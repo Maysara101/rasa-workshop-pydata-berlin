@@ -83,6 +83,14 @@
 ## intent:comment
 - พอใช้ได้
 
+## intent:accept
+- ได้
+- ตกลง
+- ok
+- OK
+- โอเค
+- okay
+
 ## intent:deny
 - ไม่เป็นไร
 - ไม่รับครับ
@@ -163,21 +171,25 @@
 - hello friend
 
 ## intent:inform
-- [สีแดง](COLOR) [10](QTY) เม็ด
-- [แดง](COLOR) [10](QTY) เม็ด
-- [สีเขียว](COLOR) [10](QTY) เม็ด
-- [เขียว](COLOR) [10](QTY) เม็ด
-- [สีนำ้เงิน](COLOR) [10](QTY) เม็ด
-- [นำ้เงิน](COLOR) [10](QTY) เม็ด
-- [10](QTY) [red](COLOR)
-- [ten](QTY) [red](COLOR)
-- [10](QTY) [green](COLOR)
-- [ten](QTY) [green](COLOR)
-- [10](QTY) [blue](COLOR)
-- [ten](QTY) [blue](COLOR)
-- เอา[สีแดง](COLOR) [10](QTY) เม็ด อย่างอื่นไม่เอา
-- อย่างล่ะ [10](QTY) เม็ด
-- อย่างล่ะ [10](QTY) เม็ด
+- [red](COLOR)
+- [green](COLOR)
+- [blue](COLOR)
+- [red](COLOR)  [10](QTY:10) เม็ด
+- [green](COLOR) [10](QTY:10) เม็ด
+- [blue](COLOR) [10](QTY:10) เม็ด
+- [สีแดง](COLOR) [10](QTY:10) เม็ด
+- [แดง](COLOR) [10](QTY:10) เม็ด
+- [สีเขียว](COLOR) [10](QTY:10) เม็ด
+- [เขียว](COLOR) [10](QTY:10) เม็ด
+- [สีนำ้เงิน](COLOR) [10](QTY:10) เม็ด
+- [นำ้เงิน](COLOR) [10](QTY:10) เม็ด
+- [10](QTY:10) [red](COLOR)
+- [ten](QTY:10) [red](COLOR)
+- [10](QTY:10) [green](COLOR)
+- [ten](QTY:10) [green](COLOR)
+- [10](QTY:10) [blue](COLOR)
+- [ten](QTY:10) [blue](COLOR)
+- เอา[สีแดง](COLOR) [10](QTY:10) เม็ด อย่างอื่นไม่เอา
 
 ## intent:stop
 - ไม่ได้เรื่อง
@@ -251,3 +263,7 @@
 ## intent:db_list_prices
 - db prices
 - db ราคา
+
+## intent:test_form
+- test form
+- form please

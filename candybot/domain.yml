@@ -6,20 +6,30 @@ intents:
   - bargain
   - inform
   - affirm
+  - accept
   - deny
   - stop
   - thankyou
   - greet
+  - color_query
+  - comment
+  - detail_query
+  - db_list_colors
+  - db_list_prices
+  - test_form
 
 entities:
   - COLOR
   - QTY
   - COLOR_LIST
+  - ORDER
+  - BAHT
 
 slots:
   QTY:
-    type: unfeaturized
-    auto_fill: false
+    type: float
+    min_value: 1
+    max_value: 100
   COLOR:
     type: unfeaturized
     auto_fill: false
@@ -27,8 +37,12 @@ slots:
     type: unfeaturized
     auto_fill: false
   PRICE_LIST:
+    type: float
+    min_value: 1
+    max_value: 1000000
+  requested_slot:
     type: unfeaturized
-    auto_fill: false
+
 
 templates:
   utter_ask_color:
@@ -50,7 +64,7 @@ templates:
   utter_wrong_color:
     - text: "ลูกอมสีนี้ ไม่มีในระบบครับ ขออภัย"
   utter_wrong_qty:
-    - text: "ปริมาณต้องเป็นจำนวนเต็มบกวน่ะครับ"
+    - text: "ใส่ปริมาณผิดครับ"
   utter_default:
     - text: "ขออภัย ผมไม่เข้าใจครับ"
   utter_greet:
@@ -58,7 +72,7 @@ templates:
   utter_show_colors:
     - text: "มีสีแดง, สีเขียว, และสีน้ำเงินครับ รับสีไหนดีครับ?"
   utter_show_prices:
-    - text: "ขายปลีกเม็ดละ 50 สตางค์ ขายส่ง 12 เม็ดขึ้นไป ตกเม็ดล่ะ 1 สลึงครับ"
+    - text: "ขายปลีกเม็ดละ 50 สตางค์"
   utter_thk_you:
     - text: "ขอบคุณที่สละเวลาครับ"
   utter_slots_values:
@@ -67,16 +81,25 @@ templates:
     - text: "db colors are {COLOR_LIST}"
   utter_list_prices:
     - text: "db prices are {PRICE_LIST}"
+  utter_deny:
+    - text: "ตอนนี้ยังไม่มี promotion ครับ"
+  utter_order:
+    - text: "Order No. {ORDER_NO} ยอด {BAHT} ครับ"
 
 actions:
+- utter_confirm
 - utter_greet
 - utter_noworries
 - utter_show_colors
 - utter_show_prices
 - utter_list_colors
 - utter_list_prices
+- utter_order
+- action_confirm
 - action_list_colors
 - action_list_pricing
+- action_order
+- action_submit
 
 forms:
   - candy_form

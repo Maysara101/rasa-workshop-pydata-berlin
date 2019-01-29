@@ -16,6 +16,13 @@
 * deny
   - utter_noworries
 
+## try extract multiple entities
+* test_form
+  - candy_form
+  - form{"name": "candy_form"}
+  - form{"name": null}
+  - utter_confirm
+
 ## Generated Story 2476928141338771446
 * greet
   - utter_greet
@@ -24,7 +31,7 @@
 * deny
   - utter_noworries
 
-## Customer list colors from database not hardcode
+## Admin list colors from database not hardcode
 * db_list_colors
   - action_list_colors
   - slot{"COLOR_LIST": "three colors"}
