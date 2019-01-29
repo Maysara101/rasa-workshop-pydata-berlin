@@ -240,5 +240,14 @@
 - thank you bye
 - um okay thank you good bye
 
-## intent:db_list
-- list database
+## intent:db_list_colors
+- db แสดงสีลูกอม
+- db แสดงสี
+- db สี
+- db สีลูกอม
+- Check the inventory
+- db colors
+
+## intent:db_list_prices
+- db prices
+- db ราคา

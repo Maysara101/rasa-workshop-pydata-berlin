@@ -25,7 +25,12 @@
   - utter_noworries
 
 ## Customer list colors from database not hardcode
-* db_list
+* db_list_colors
   - action_list_colors
   - slot{"COLOR_LIST": "three colors"}
   - utter_list_colors
+* db_list_prices
+  - action_list_pricing
+  - slot{"PRICE_LIST": "three colors"}
+  - utter_list_prices
+

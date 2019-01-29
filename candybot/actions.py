@@ -6,6 +6,9 @@ from rasa_core_sdk.forms import FormAction
 
 
 class ActionListColor(Action):
+    """
+    Retrieve the values from the external
+    """
     def name(self) -> str:
         return "action_list_colors"
 
@@ -28,7 +31,7 @@ class ActionListPricing(Action):
             domain  # type:  Dict[Text, Any]
             ) -> List[Dict[str, any]]:
         result = ['0.5', '0.6', '0.7']
-        return [SlotSet("PRICE_LIST", result if result is not None else [])]
+        return [SlotSet("PRICE_LIST", result)]
 
 
 class CandyForm(FormAction):
