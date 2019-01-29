@@ -54,6 +54,8 @@ templates:
     - text: "สวัสดีครับ ผมคือ candybot โปรแกรมขายลูกอมสามสี"
   utter_show_colors:
     - text: "มีสีแดง, สีเขียว, และสีน้ำเงินครับ รับสีไหนดีครับ?"
+  utter_show_prices:
+    - text: "ขายปลีกเม็ดละ 50 สตางค์ ขายส่ง 12 เม็ดขึ้นไป ตกเม็ดล่ะ 1 สลึงครับ"
   utter_thk_you:
     - text: "ขอบคุณที่สละเวลาครับ"
   utter_slots_values:
@@ -63,6 +65,7 @@ actions:
 - utter_greet
 - utter_noworries
 - utter_show_colors
+- utter_show_prices
 
 forms:
   - candy_form
