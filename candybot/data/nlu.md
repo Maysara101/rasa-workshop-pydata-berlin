@@ -80,6 +80,9 @@
 - มีสีอะไร
 - มีกี่สี
 
+## intent:comment
+- พอใช้ได้
+
 ## intent:deny
 - ไม่เป็นไร
 - ไม่รับครับ
@@ -99,13 +102,6 @@
 - do you have something else
 - no this does not work for me
 
-## intent:first_query
-- ขายอะไร
-- มีอะไรขายบ้าง
-- มีอะไรมั่ง
-- ร้านอะไร
-- บอทอะไรเนี่ย
-
 ## intent:detail_query
 - ขายยังไง
 - ราคาเท่าไหร่
@@ -122,6 +118,12 @@
 - [สีแดง](COLOR) เท่าไหร่
 - [สีแดง](COLOR) ราคาเท่าไหร่
 
+## intent:first_query
+- ขายอะไร
+- มีอะไรขายบ้าง
+- มีอะไรมั่ง
+- ร้านอะไร
+- บอทอะไรเนี่ย
 
 ## intent:greet
 - ฮัลโหล
@@ -159,7 +161,6 @@
 - hi?
 - hey bot!
 - hello friend
-- hi
 
 ## intent:inform
 - [สีแดง](COLOR) [10](QTY) เม็ด
@@ -177,9 +178,6 @@
 - เอา[สีแดง](COLOR) [10](QTY) เม็ด อย่างอื่นไม่เอา
 - อย่างล่ะ [10](QTY) เม็ด
 - อย่างล่ะ [10](QTY) เม็ด
-
-## intent:comment
-- พอใช้ได้
 
 ## intent:stop
 - ไม่ได้เรื่อง
