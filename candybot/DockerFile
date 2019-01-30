@@ -1,0 +1,25 @@
+FROM python:3.6
+MAINTAINER Hbot.io
+
+USER root
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get install openssh-client -y
+
+WORKDIR /app
+
+RUN mkdir data
+COPY data/* data/
+COPY actions.py actions.py
+COPY production/endpoints.yml endpoints.yml
+COPY domain.yml domain.yml
+COPY Makefile Makefile
+COPY nlu_tensorflow.yml nlu_tensorflow.yml
+COPY sentiment.py sentiment.py
+
+# pip-compiles does not work. Dependencies broken a lot!
+RUN pip install rasa_core
+RUN pip install rasa_nlu[spacy]
+RUN pip install sklearn_crfsuite
+RUN pip install pygraphviz
+RUN pip install tensorflow==1.10.0
+RUN pip install https://github.com/PyThaiNLP/pythainlp/archive/dev.zip
