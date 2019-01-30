@@ -171,6 +171,16 @@
 - hello friend
 
 ## intent:inform
+- [1](QTY:1) เม็ด
+- [2](QTY:2) เม็ด
+- [3](QTY:3) เม็ด
+- [4](QTY:4) เม็ด
+- [5](QTY:5) เม็ด
+- [6](QTY:6) เม็ด
+- [7](QTY:7) เม็ด
+- [8](QTY:8) เม็ด
+- [9](QTY:9) เม็ด
+- [10](QTY:10) เม็ด
 - [red](COLOR)
 - [green](COLOR)
 - [blue](COLOR)

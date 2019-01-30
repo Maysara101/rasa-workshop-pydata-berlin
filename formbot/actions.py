@@ -6,7 +6,7 @@ from rasa_core_sdk import Tracker
 from rasa_core_sdk.events import SlotSet
 from rasa_core_sdk.executor import CollectingDispatcher
 from rasa_core_sdk.forms import FormAction, REQUESTED_SLOT
-
+from pprint import pprint
 
 class TestAction(Action):
     """
@@ -38,7 +38,7 @@ class RestaurantForm(FormAction):
         """A list of required slots that the form has to fill"""
 
         return ["cuisine", "num_people", "outdoor_seating",
-                "preferences", "feedback"]
+                "preferences", "feedback", "drink"]
 
     def slot_mappings(self):
         # type: () -> Dict[Text: Union[Dict, List[Dict]]]
@@ -64,7 +64,10 @@ class RestaurantForm(FormAction):
                                                        "preferences"),
                                 self.from_text(not_intent="affirm")],
                 "feedback": [self.from_entity(entity="feedback"),
-                             self.from_text()]}
+                             self.from_text()],
+                "drink": self.from_entity(entity="drink",
+                                          not_intent="chitchat"),
+                }
 
     @staticmethod
     def cuisine_db():
@@ -97,9 +100,11 @@ class RestaurantForm(FormAction):
         # extract other slots that were not requested
         # but set by corresponding entity
         slot_values = self.extract_other_slots(dispatcher, tracker, domain)
+        pprint(f"slot_values>> {slot_values}")
 
         # extract requested slot
         slot_to_fill = tracker.get_slot(REQUESTED_SLOT)
+        pprint(f"slot_to_fill>> {slot_to_fill}")
         if slot_to_fill:
             slot_values.update(self.extract_requested_slot(dispatcher,
                                                            tracker, domain))
@@ -141,6 +146,15 @@ class RestaurantForm(FormAction):
                         dispatcher.utter_template('utter_wrong_outdoor_seating',
                                                   tracker)
                         # validation failed, set slot to None
+                        slot_values[slot] = None
+            elif slot == 'drink':
+                if isinstance(value, str):
+                    if 'coke' in value:
+                        slot_values[slot] = 'coka cola'
+                    elif 'coke' not in value:
+                        slot_values[slot] = False
+                    else:
+                        dispatcher.utter_attachment('utter_wrong_drink', tracker)
                         slot_values[slot] = None
 
         # validation succeed, set the slots values to the extracted values

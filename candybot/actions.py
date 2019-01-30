@@ -5,6 +5,7 @@ from rasa_core_sdk.events import SlotSet
 from rasa_core_sdk.forms import FormAction, REQUESTED_SLOT
 from pprint import pprint
 
+
 class ActionListColor(Action):
     """
     Retrieve the values from the external
@@ -131,8 +132,6 @@ class CandyForm(FormAction):
                                                "with action {1}"
                                                "".format(slot_to_fill,
                                                          self.name()))
-        pprint('>> hello')
-        pprint(f'>> {slot_values.items()}')
         for slot, value in slot_values.items():
             if slot == 'COLOR':
                 if value.lower() not in self.color_db():
@@ -140,15 +139,17 @@ class CandyForm(FormAction):
                     dispatcher.utter_template('utter_show_colors', tracker)
 
                     slot_values[slot] = None
-
             elif slot == 'QTY':
                 if not self.is_int(value) or int(value) <= 0:
                     pprint('>> utter_wrong_qty')
                     dispatcher.utter_template('utter_wrong_qty',
                                               tracker)
                     slot_values[slot] = None
+                # else:
+                #     slot_values[slot] = int(value)
 
         return [SlotSet(slot, value) for slot, value in slot_values.items()]
 
     def submit(self, dispatcher, tracker, domain) -> List[Dict]:
         dispatcher.utter_template('utter_submit', tracker)
+        return []

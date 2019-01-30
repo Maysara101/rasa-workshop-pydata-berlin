@@ -84,6 +84,7 @@
 - no this does not work for me
 
 ## intent:inform
+- [coke](drink) please
 - [afghan](cuisine) food
 - how bout [asian oriental](cuisine)
 - what about [indian](cuisine) food

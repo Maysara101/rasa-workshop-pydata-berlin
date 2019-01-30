@@ -1,3 +1,8 @@
+## Installation
+1. Read from `requirements.in` and install one by one beause `pip-tools` 
+   unable to do `pip-compile`
+
+
 # PyData Berlin - Building conversational AI with the Rasa stack
 
 This repo contains the code for my workshop at PyData Berlin 2018. You can find the slides of my talk [here](https://www.slideshare.net/JustinaPetraityt/deprecating-the-state-machine-building-conversational-ai-with-the-rasa-stack).

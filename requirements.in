@@ -3,4 +3,5 @@ rasa_core
 rasa_nlu[spacy]
 sklearn_crfsuite
 pygraphviz
+tensorflow
 #pip install https://github.com/PyThaiNLP/pythainlp/archive/dev.zip

@@ -16,6 +16,7 @@ entities:
   - number
   - feedback
   - seating
+  - drink
 
 slots:
   cuisine:
@@ -31,6 +32,9 @@ slots:
     type: unfeaturized
     auto_fill: false
   feedback:
+    type: unfeaturized
+    auto_fill: false
+  drink:
     type: unfeaturized
     auto_fill: false
   requested_slot:
@@ -49,12 +53,15 @@ templates:
     - text: "please provide additional preferences"
   utter_ask_feedback:
     - text: "please give your feedback on your experience so far"
+  utter_ask_drink:
+    - text: "would you like some drink?"
   utter_submit:
     - text: "All done!"
   utter_slots_values:
     - text: "I am going to run a restaurant search using the following parameters:\n
              - cuisine: {cuisine}\n
              - num_people: {num_people}\n
+             - drink: {drink}\n
              - outdoor_seating: {outdoor_seating}\n
              - preferences: {preferences}\n
              - feedback: {feedback}"
@@ -70,6 +77,8 @@ templates:
     - text: "number of people should be a positive integer, please try again"
   utter_wrong_outdoor_seating:
     - text: "could not convert input to boolean value, please try again"
+  utter_wrong_drink:
+    - text: "Coke only sir!(Just testing)"
   utter_default:
     - text: "sorry, I didn't understand you, please try input something else"
   utter_greet:

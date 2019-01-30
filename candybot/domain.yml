@@ -27,9 +27,8 @@ entities:
 
 slots:
   QTY:
-    type: float
-    min_value: 1
-    max_value: 100
+    type: unfeaturized
+    auto_fill: false
   COLOR:
     type: unfeaturized
     auto_fill: false
@@ -37,17 +36,16 @@ slots:
     type: unfeaturized
     auto_fill: false
   PRICE_LIST:
-    type: float
-    min_value: 1
-    max_value: 1000000
+    type: unfeaturized
+    auto_fill: false
   requested_slot:
     type: unfeaturized
 
 
 templates:
-  utter_ask_color:
+  utter_ask_COLOR:
     - text: "รับลูกอมสีอะไรดีครับ"
-  utter_ask_qty:
+  utter_ask_QTY:
     - text: "รับกี่เม็ดดีครับ"
   utter_ask_feedback:
     - text: "ขอคำติชมซักนิด เพื่อปรับปรุงการบริการครับ"
