@@ -1,4 +1,4 @@
-## try extract multiple entities
+## perfect path
 * greet
   - utter_greet
 * first_query

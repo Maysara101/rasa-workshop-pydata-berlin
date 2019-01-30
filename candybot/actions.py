@@ -123,6 +123,7 @@ class CandyForm(FormAction):
         slot_values = self.extract_other_slots(dispatcher, tracker, domain)
         # extract requested slot
         slot_to_fill = tracker.get_slot(REQUESTED_SLOT)
+
         if slot_to_fill:
             slot_values.update(self.extract_requested_slot(dispatcher,
                                                            tracker, domain))
