@@ -1,3 +1,9 @@
+
+variables:
+  PYENV_ROOT: "$HOME/.pyenv"
+  PATH: "/home/gitlab-runner/.pyenv/shims:/home/gitlab-runner/.pyenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+  PIPENV_PYTHON: "$PYENV_ROOT/shims/python"
+
 stages:
   - build
   - deploy
