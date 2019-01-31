@@ -1,9 +1,7 @@
 candybot.{$DOMAIN_NAME} {
     # redir https://candy
     proxy / candybot:5005{
-        header_upstream Host {host}
-        header_upstream X-Real-IP {remote}
-        header_upstream X-Forwarded-Proto {scheme}
+        transparent
     }
     log stdout
     errors stdout
