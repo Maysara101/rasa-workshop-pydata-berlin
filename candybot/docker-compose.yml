@@ -35,3 +35,6 @@ services:
     ports:
       - "5055:5055"
     command: ["make", "run-actions"]
+
+volumes:
+  production_caddy: {}
