@@ -1,5 +1,20 @@
 version: '3.7'
 services:
+  caddy:
+    build:
+      context: .
+      dockerfile: ../compose/production/caddy/Dockerfile
+    image: registry.gitlab.com/multy/multy_herr/caddy:prod
+    depends_on:
+      - django
+    volumes:
+      - production_caddy:/root/.caddy
+    env_file:
+      - ../.envs/.production/.caddy
+    ports:
+      - "0.0.0.0:80:80"
+      - "0.0.0.0:443:443"
+      -
   candybot:
     build:
       context: .
