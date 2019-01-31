@@ -4,7 +4,6 @@ services:
     build:
       context: .
       dockerfile: ./compose/production/caddy/Dockerfile
-    image: registry.gitlab.com/multy/multy_herr/caddy:prod
     depends_on:
       - candybot
     volumes:
