@@ -23,7 +23,6 @@ deploy:
   stage: deploy
   tags:
     - candybot
-    - rasa
   script:
     - cd candybot
     - docker-compose down
