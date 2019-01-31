@@ -1,8 +1,7 @@
 candybot.{$DOMAIN_NAME} {
     # redir https://candy
-    proxy / candybot:5005{
-        transparent
-    }
+    proxy / candybot:5005
+    transparent
     log stdout
     errors stdout
     gzip
