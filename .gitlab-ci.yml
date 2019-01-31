@@ -1,0 +1,23 @@
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  tags:
+    - candybot
+  script:
+    - python -V
+    - ls -alh
+    - pwd
+    - whoami
+    - docker-compose build
+
+deploy:
+  stage: deploy
+  tags:
+    - candybot
+    - rasa
+  script:
+    - docker-compose down
+    - docker-compose up

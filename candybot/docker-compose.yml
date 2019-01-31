@@ -14,7 +14,7 @@ services:
     ports:
       - "0.0.0.0:80:80"
       - "0.0.0.0:443:443"
-      -
+
   candybot:
     build:
       context: .
