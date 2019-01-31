@@ -25,5 +25,6 @@ deploy:
     - candybot
     - rasa
   script:
+    - cd candybot
     - docker-compose down
     - docker-compose up
