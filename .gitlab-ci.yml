@@ -17,6 +17,7 @@ build:
     - ls -alh
     - pwd
     - whoami
+    - cd candybot
     - docker-compose build
 
 deploy:
