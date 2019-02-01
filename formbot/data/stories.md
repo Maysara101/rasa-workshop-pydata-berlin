@@ -8,5 +8,6 @@
     - utter_slots_values
 * thankyou
     - utter_noworries
+    - action_restart
 
 
